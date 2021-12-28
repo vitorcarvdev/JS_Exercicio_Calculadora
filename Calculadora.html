@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Criando uma Calculadora</title>
+    
 </head>
 <body>
+    <script src="js/script.js"></script>
     <h1>Calculadora</h1>
     <button onclick="calcular('+')">+</button>
     <button onclick="calcular('-')">-</button>
@@ -12,42 +14,5 @@
     <button onclick="calcular('/')">/</button>
     <br><br>
     <div id="resultado"></div>
-
-    <script>
-        var infotab = document.querySelector('#resultado');
-
-        var numb = prompt('Digite um numero');
-        numb = parseFloat(numb);
-
-        escreve();
-
-        function escreve(){
-            var resultado = document.querySelector('#resultado');
-            resultado.innerHTML = numb;
-        }
-
-        function calcular(simbulo){
-            var numbDois = prompt('Digite o segundo numero');
-            numbDois = parseFloat(numbDois);
-
-            switch(simbulo){
-                case '+':
-                infotab.innerHTML = numb + numbDois;
-                break;
-                case '-':
-                infotab.innerHTML = numb - numbDois;
-                break;
-                case '*':
-                infotab.innerHTML = numb * numbDois;
-                break;
-                case '/':
-                infotab.innerHTML = numb / numbDois;
-                break;
-                default: alert("Algo deu errado");
-            }
-        }
-        
-    </script>
-
 </body>
 </html>
